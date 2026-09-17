@@ -10,19 +10,23 @@ This is not Argent. This is not Kaspa core. This is not an audit. This is not a 
 
 > Clone `argent-template`, run `./setup`, follow a video, PR a playground demo. That is a **local compiler loop**. Calling it "build a Kaspa L1 app" without saying the template never touches the network is marketing. The missing rail is still the dollar.
 
+Re-checked 17 Sep 2026 against live `argent-lang/argent` `master` (HEAD `e76ee07`). General-production row does not flip. One Argent README clause is stale (Silverscript v1.0.0 already shipped). See the verdict table.
+
 ## Verdict
 
 | Claim | Holds? |
 | --- | --- |
 | Git + Rust is enough to start the loop | **Mostly.** Template exists. Smoke demo exists. |
 | This onboards you onto Kaspa L1 | **No.** README: does not connect to a Kaspa network, manage a wallet, or submit transactions. |
-| Argent is ready for general production use | **No.** Compiler README: not release-ready; needs audit and hardening. Zero releases/tags. |
-| Silverscript foundation is stable | **Yes, as a compiler.** v1.0.0 shipped 9 Sep 2026. That does not certify Argent or an app. |
+| Argent is ready for general production use | **No.** Compiler README, still on `master`: "not yet release-ready" and "further audit and hardening before general production use." GitHub [releases](https://api.github.com/repos/argent-lang/argent/releases) `[]`, [tags](https://api.github.com/repos/argent-lang/argent/tags) `[]`. Latest commit (14 Sep) still adding security rules. |
+| Expert early use of generated `.sil` | **Narrow path the README itself allows** — not general production. Advanced users who can verify generated contracts against the intended app. Do not round this up. |
+| Silverscript foundation is stable | **Yes, as a compiler.** [v1.0.0](https://github.com/kaspanet/silverscript/releases/tag/v1.0.0) shipped 9 Sep 2026. Argent pinned to that commit on 10 Sep ([#60](https://github.com/argent-lang/argent/commit/867b080b973f93d75c4b7ca8ce06950a963accbb)). That does not certify Argent or an app. |
+| Argent README is current on Silverscript | **No. Stale clause.** It still says "Once Silverscript completes its audit and is released…" after v1.0.0 exists. The not-release-ready / before-general-production sentences were **not** withdrawn. |
 | Docs exist for a builder landing cold | **No.** Tweet 3 is a request to *write* the docs. |
 | Helping people build is useful | **Yes.** Empty funnel is real. First-click clone is real. |
 | That is enough for dapps | **No.** Dapps hate volatility. Kaspa L1 still has no dollar rail. |
 
-**Bottom line:** interesting onboarding. Premature as a product path. The stables hole is not a side note. It is the blocker.
+**Bottom line:** interesting onboarding. Premature as a product path. Argent is not general-production. The stables hole is not a side note. It is the blocker.
 
 ## The question that the thread does not ask
 
@@ -107,6 +111,7 @@ Surrounding work, not in the thread, that is still his:
 - KEF grantee since 15 Dec 2025, mission stated as Kaspa Core ([grant post](https://x.com/IzioDev/status/2000490683598004383)).
 - Co-author of [KCC-1](https://github.com/kaspanet/kccs/blob/main/kcc-0001.md) (covenant ABI) and [KCC-2](https://github.com/kaspanet/kccs/blob/main/kcc-0002.md) (authority schemes); co-author on [KCC-20](https://github.com/kaspanet/kccs/blob/main/kcc-0020.md) (fungible token). All **Draft**.
 - First Argent app: name-service PoC, [argent-playground PR #6](https://github.com/argent-lang/argent-playground/pull/6).
+- Co-author on Argent security work still landing on `master` (e.g. [leader/delegator rules 5 and 6](https://github.com/argent-lang/argent/commit/e76ee07f8b2719e8c06eee085ca3d613cc2b56e7), 14 Sep 2026). That is pre-release compiler work, not a production stamp.
 - Earlier builder-hub / starter-kit work (`npx @kluster/kaspa-starter-cli`, KIGS).
 
 ## Why he did it
@@ -130,6 +135,7 @@ None of that is malice. It is a core-dev local optimum. The local optimum is not
 5. Pulled live kascov mainnet stats and template breakdown (17 Sep 2026).
 6. Cross-checked L2 stables (KaspaKaha 31 Jul 2026), Kasplex/Igra retention (CoinEx 17 Jul 2026), KUSD TN10 (Kas-Smiths #143 + [STP-KAS/kusdt-bitcoffee](https://github.com/STP-KAS/kusdt-bitcoffee)).
 7. Did **not** run `./setup` in this pass. Did **not** submit a covenant to mainnet or TN10 from the template. The template's own README makes that a different job.
+8. **Re-check, 17 Sep 2026:** re-fetched Argent README, [releases](https://api.github.com/repos/argent-lang/argent/releases) `[]`, [tags](https://api.github.com/repos/argent-lang/argent/tags) `[]`, Silverscript v1.0.0, Argent pin commit `867b080` / PR #60, HEAD `e76ee07` (security rules 5–6, IzioDev co-author). Split the verdict: general production **No**; expert `.sil` path is the README's own narrower sentence. Stale "once Silverscript is released" clause noted. Production row does not flip.
 
 This is a claim review, not a compiler audit.
 
@@ -145,13 +151,19 @@ This is a claim review, not a compiler audit.
 | PR to playground | Ship your app | Ship a **demo binary**. Not a mainnet program. |
 | Discord `development` | Support | Real. Not a substitute for docs, versions, or a chain submit path. |
 
-Official Argent status, quoted because people will round it up:
+Official Argent status, quoted because people will round it up. Re-fetched from `master` 17 Sep 2026:
 
 > The project is still under active development and is not yet release-ready. Once Silverscript completes its audit and is released, advanced users who can review the generated `.sil` contracts will have a viable path to careful early production use. … Argent itself will still need further audit and hardening before general production use.
 >
 > — [argent-lang/argent README](https://github.com/argent-lang/argent)
 
-Silverscript 1.0 is out. The second sentence still applies. Kaspa docs called Argent "a design direction and prototype, not a production-stable API" ([docs.kaspa.org/toccata/argent](https://docs.kaspa.org/toccata/argent), via kaspaexplained).
+Split that paragraph. Do not weld it into one "ready" or one "useless."
+
+- **Stale:** "Once Silverscript completes its audit and is released" — Silverscript [v1.0.0](https://github.com/kaspanet/silverscript/releases/tag/v1.0.0) shipped 9 Sep 2026. Argent targeted it on 10 Sep. The README was not updated.
+- **Still live, still binding:** "not yet release-ready" and "before general production use." Zero releases. Zero tags. Security rules still landing.
+- **Narrow, not general:** "advanced users who can review the generated `.sil`" is expert early use. It is not an onboarding claim for tweet 1.
+
+Kaspa docs called Argent "a design direction and prototype, not a production-stable API" ([docs.kaspa.org/toccata/argent](https://docs.kaspa.org/toccata/argent), via kaspaexplained).
 
 Also missing from the tweet, present in the stack:
 
@@ -168,7 +180,7 @@ Required, not nice-to-have. Ordered by how much the current thread misleads.
 2. **Pin a compiler revision.** `setup` taking floating `master` is how a Getting Started from Tuesday fails on Thursday. Tag `argent` even if the tag says `preview`.
 3. **Windows commands in the tweet that mentioned PowerShell.** `./setup` is not PowerShell. `setup.cmd` / `setup-win.ps1` exist. Use them.
 4. **Docs before the invitation.** Crowdsourcing Getting Started *after* telling people to start is inverted. His own criteria are good. He should ship one page that meets them, then ask for cookbooks.
-5. **A "what you cannot build yet" page.** No shared global state. No L1 dollar. No production Argent. No covenant-UTXO RPC. No audited ICC. Vaults/escrow/spend-caps: yes, on chain, in Silverscript. "DeFi app": no.
+5. **A "what you cannot build yet" page.** No shared global state. No L1 dollar. No general-production Argent. No covenant-UTXO RPC. No audited ICC. Vaults/escrow/spend-caps: yes, on chain, in Silverscript. "DeFi app": no.
 6. **A testnet submit path in the template.** Until `cargo run` produces an accepted TN10 txid, this is a language playground. kascov already deploys SilverScript Mecenas/Escrow/LastWill on TN10 from a browser. The official Argent template should not be strictly weaker than that.
 7. **Stop the apps-first, stables-later story.** It is false as economics even if it is comfortable as core work. Either:
    - name a concrete L1 dollar path (issuer covenant, or KUSD-class with a real DEX and a wallet pay path), or
@@ -176,12 +188,13 @@ Required, not nice-to-have. Ordered by how much the current thread misleads.
 8. **Do not round KCC Drafts up to standards.** He published them. They are Draft. Tweet-level onboarding that implies a token standard exists is how you get another KRC-20 graveyard with extra steps. KRC-20 already did the "tokens exist, liquidity does not" cycle: selected names **97–99%** off ATH by mid-July 2026 (CoinEx).
 9. **One mainnet reference app with a txid.** Name service PoC, chess, dex_asset: show an *accepted* transaction, or stop calling them L1 apps in public.
 10. **KEF / Discord: put the dollar on the core agenda as infrastructure, not as "someone else's juicy app."** A unit of account is rails. Rails are Core. Treat it that way or admit Core is choosing not to.
+11. **Fix the Argent README Silverscript clause.** v1.0.0 shipped. Either withdraw "once Silverscript is released" or people will quote the paragraph as if the foundation never landed — or, worse, as if Argent landed with it.
 
 ## Conclusion
 
 Izio did a competent first-click. Git, clone, setup, video, playground, PR, Discord. For a language that is still unreleased, that is more than most Kaspa surfaces have offered. Credit that. Do not inflate it.
 
-He did **not** give people a way to build a Kaspa L1 app in the sense anyone outside the compiler room means it. The template does not talk to Kaspa. Argent is not release-ready. The docs he wants are the docs he did not write. The token convention is Draft. The live L1 token layer is about fifty dollars. The live L1 covenant layer is about forty-five thousand dollars, mostly unlabeled P2SH. Bridged L2 stables are a million and a half, elsewhere, and shrinking in users.
+He did **not** give people a way to build a Kaspa L1 app in the sense anyone outside the compiler room means it. The template does not talk to Kaspa. Argent is not release-ready for general production. A stale README sentence about Silverscript does not change that. The docs he wants are the docs he did not write. The token convention is Draft. The live L1 token layer is about fifty dollars. The live L1 covenant layer is about forty-five thousand dollars, mostly unlabeled P2SH. Bridged L2 stables are a million and a half, elsewhere, and shrinking in users.
 
 **Dapps hate volatility.** Helping people build is fine. It is not an answer to the missing rail. "Juicy apps will attract stables" is the sentence you say when you do not want to do the dollar. The implementation has been possible on L1, by his own post, since roughly late June. It is still not there.
 
