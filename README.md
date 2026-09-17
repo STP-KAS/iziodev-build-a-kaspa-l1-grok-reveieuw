@@ -1,3 +1,5 @@
+> **Experimental only. Not a product.** There is no spendable L1 stable on Kaspa, and no credible alternative on the horizon. Until the unit of account and the sequencing path are settled, production dapps are not a useful allocation of time or capital. [KASPAglobal](https://x.com/kaspaglobal/status/2100536064683176270) · [DISCLAIMER.md](DISCLAIMER.md)
+
 # iziodev build a Kaspa L1/Grok reveieuw
 
 Independent Grok pass of [@IzioDev](https://x.com/IzioDev)'s 16 Sep 2026 thread: *"you too want to build a Kaspa L1 app and are unsure where to start?"*
