@@ -16,7 +16,12 @@ What each URL backs. Dates are when the source was published or when this desk r
 
 | Source | What it backs |
 | --- | --- |
-| [github.com/argent-lang/argent](https://github.com/argent-lang/argent) README | Actor compiler. **Not release-ready.** Needs audit/hardening. Compiles `.ag` → Silverscript + artifact. |
+| [github.com/argent-lang/argent](https://github.com/argent-lang/argent) README (re-fetched 17 Sep 2026) | Actor compiler. **Not release-ready. Before general production use.** Also allows a narrower expert `.sil`-review path. Compiles `.ag` → Silverscript + artifact. |
+| Same README, "Once Silverscript completes its audit and is released" | **Stale.** Silverscript v1.0.0 already shipped. Not-release-ready sentences were not withdrawn. |
+| [api.github.com/.../argent/releases](https://api.github.com/repos/argent-lang/argent/releases) | `[]` on 17 Sep 2026. |
+| [api.github.com/.../argent/tags](https://api.github.com/repos/argent-lang/argent/tags) | `[]` on 17 Sep 2026. |
+| [commit 867b080 / PR #60](https://github.com/argent-lang/argent/commit/867b080b973f93d75c4b7ca8ce06950a963accbb) | 10 Sep 2026: pin Argent to Silverscript v1.0.0. |
+| [commit e76ee07](https://github.com/argent-lang/argent/commit/e76ee07f8b2719e8c06eee085ca3d613cc2b56e7) | 14 Sep 2026 HEAD at re-check: leader/delegator security rules 5 and 6. Co-authored by IzioDev. Pre-release work. |
 | [github.com/argent-lang/argent-template](https://github.com/argent-lang/argent-template) README | Quick start. Scope: local runtime only. No network, no wallet, no submit. `./setup` clones current master. Windows: `setup.cmd`, `setup-win.ps1`. |
 | [github.com/argent-lang/argent-playground](https://github.com/argent-lang/argent-playground) | End-to-end local demos. PR target named in the tweet. |
 | [playground/ag](https://github.com/argent-lang/argent-playground/tree/master/ag) | Tweet example link 1 (resolved from t.co/AOcj7Kt7s7). |
@@ -69,3 +74,4 @@ What each URL backs. Dates are when the source was published or when this desk r
 - Unverified "production use" claims in unmerged KCC PRs (KCC-21 / KCC-402).
 - L2 TVL as evidence of an L1 dollar.
 - Local `cargo run` success as evidence of a mainnet app.
+- Silverscript v1.0.0 as a stamp that Argent is general-production ready.
