@@ -214,3 +214,12 @@ Until a spendable L1 stable exists — not a TN10 experiment, not an Igra IOU, n
 ## License
 
 MIT. No warranty. Not financial advice. Not Kaspa core. Not an audit of Argent, Silverscript, or KEF.
+
+---
+
+> **Standard disclaimer.** This GitHub, not the topic above.
+>
+> Intentions are good; thought process is questionable. STP remains delusional. Si vis pacem, para bellum.
+>
+> Intern at https://sixpack.wtf/  
+> X: https://x.com/StppStp · GitHub: https://github.com/STP-KAS
