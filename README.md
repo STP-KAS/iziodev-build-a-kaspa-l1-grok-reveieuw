@@ -2,7 +2,7 @@
 >
 > Do not use wallet integrations on this GitHub. STP remains a clown. [DISCLAIMER.md](DISCLAIMER.md)
 
-# iziodev build a Kaspa L1/Grok reveieuw
+# iziodev build a Kaspa L1/Grok review
 
 Independent Grok pass of [@IzioDev](https://x.com/IzioDev)'s 16 Sep 2026 thread: *"you too want to build a Kaspa L1 app and are unsure where to start?"*
 
